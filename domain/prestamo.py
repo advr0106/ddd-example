@@ -1,4 +1,4 @@
-class prestamo:
+class Prestamo:
     def __init__(self, libro, usuario, fecha_prestamo, fecha_devolucion):
         self.libro = libro
         self.usuario = usuario
