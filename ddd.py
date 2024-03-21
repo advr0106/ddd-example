@@ -39,6 +39,19 @@ class RepositorioPrestamos:
     def obtener_prestamos_por_usuario(self, usuario):
         return [prestamo for prestamo in self.prestamos if prestamo.usuario == usuario]
 
+class RepositorioUsuarios:
+    def __init__(self):
+        self.usuarios = []
+
+    def agregar_usuario(self, usuario):
+        self.usuarios.append(usuario)
+
+    def obtener_usuario_por_email(self, email):
+        return next((usuario for usuario in self.usuarios if usuario.email == email), None)
+
+    def obtener_usuarios_por_nombre(self, nombre):
+        return [usuario for usuario in self.usuarios if usuario.nombre == nombre]
+
 # Aplicación (Application)
 class BibliotecaService:
     def __init__(self, repo_libros, repo_prestamos):
@@ -92,6 +105,7 @@ class Consola:
 if __name__ == "__main__":
     repo_libros = RepositorioLibros()
     repo_prestamos = RepositorioPrestamos()
-    biblioteca_service = BibliotecaService(repo_libros, repo_prestamos)
+    repo_usuarios = RepositorioUsuarios()
+    biblioteca_service = BibliotecaService(repo_libros, repo_prestamos, repo_usuarios)
     consola = Consola(biblioteca_service)
     consola.ejecutar()
