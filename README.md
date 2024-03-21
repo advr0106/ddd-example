@@ -86,7 +86,7 @@ This will start the console-based application, where you can interact with the l
 This project was developed using Python 3.11. It adheres to Domain-Driven Design principles, organizing the codebase into distinct layers that separate concerns and promote a rich domain model.
 
 ## Contributors
-    Grupo#2:		ID:		Usuario de GitHub:
+    Grupo#2:		        ID:		    Usuario de GitHub:
     Heydi Garcia Sánchez    1107303		CourantLuna
     Fernando A. Rodriguez   1096552		Farcuto
     Alex Valenzuela         1093917		Alex-GCS
