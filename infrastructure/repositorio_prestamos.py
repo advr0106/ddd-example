@@ -15,8 +15,8 @@ class RepositorioPrestamos:
     def agregar_prestamo(self, prestamo):
         self.prestamos.append(prestamo)
 
-    def obtener_prestamos_por_usuario(self, usuario):
-        return [prestamo for prestamo in self.prestamos if prestamo.usuario == usuario]
+    def obtener_prestamos_por_usuario(self, usuario_email):
+        return [prestamo for prestamo in self.prestamos if prestamo.usuario.email == usuario_email]
 
     def listar_prestamos(self):
         return self.prestamos

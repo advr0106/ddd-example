@@ -45,10 +45,8 @@ class Consola:
 
             elif opcion == "3":
                 isbn = input("Ingrese el ISBN del libro que desea devolver: ")
-                usuario_nombre = input("Ingrese su nombre: ")
                 usuario_email = input("Ingrese su correo electrónico: ")
-                usuario = Usuario(usuario_nombre, usuario_email)
-                prestamo = self.biblioteca_service.devolver_libro(isbn, usuario)
+                prestamo = self.biblioteca_service.devolver_libro(isbn, usuario_email)
                 if prestamo:
                     print(f"Libro '{prestamo.libro.titulo}' devuelto correctamente por '{prestamo.usuario.nombre}'.")
                 else:

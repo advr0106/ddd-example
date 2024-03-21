@@ -24,19 +24,17 @@ class BibliotecaService:
             self.repo_prestamos.agregar_prestamo(prestamo)
             
             return prestamo
-        
         else:
-        
             return None
-    def decolver_libro(self, isdn, usuario):
-        prestamo_usuario = self.repo_prestamos.obtener_prestamos_por_usuario(usuario)
+    def devolver_libro(self, isbn, usuario_email):
+        prestamo_usuario = self.repo_prestamos.obtener_prestamos_por_usuario(usuario_email)
         prestamo = next((prestamo for prestamo in prestamo_usuario if prestamo.libro.isbn == isbn), None)
         if prestamo:
-            self.repo_prestamo.prestamo.remove(prestamo)
+            self.repo_prestamos.prestamos.remove(prestamo)
             return prestamo
         else:
             return None
-    def lista_libros(self):
+    def listar_libros(self):
         return self.repo_libros.listar_libros()
-    def listar_prestamo(self):
+    def listar_prestamos(self):
         return self.repo_prestamos.listar_prestamos()

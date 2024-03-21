@@ -1,4 +1,4 @@
-from entidad_base import EntidadBase
+from domain.entidad_base import EntidadBase
 
 class Usuario(EntidadBase):
     def __init__(self, nombre, email):

@@ -1,4 +1,4 @@
-from entidad_base import EntidadBase
+from domain.entidad_base import EntidadBase
 
 class Prestamo(EntidadBase):
     def __init__(self, libro, usuario, fecha_prestamo, fecha_devolucion):
