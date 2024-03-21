@@ -28,3 +28,15 @@ class BibliotecaService:
         else:
         
             return None
+    def decolver_libro(self, isdn, usuario):
+        prestamo_usuario = self.repo_prestamos.obtener_prestamos_por_usuario(usuario)
+        prestamo = next((prestamo for prestamo in prestamo_usuario if prestamo.libro.isbn == isbn), None)
+        if prestamo:
+            self.repo_prestamo.prestamo.remove(prestamo)
+            return prestamo
+        else:
+            return None
+    def lista_libros(self):
+        return self.repo_libros.listar_libros()
+    def listar_prestamo(self):
+        return self.repo_prestamos.listar_prestamos()
