@@ -93,4 +93,5 @@ This project was developed using Python 3.11. It adheres to Domain-Driven Design
     Diego Rodriguez         1105880		D1egoSebastian
     Axel Baez               1100321		Axell03
     Lisandro jesus          1103763		Lisandro1103763
+    Gabriel De La Rosa      1108920     Gabriel7729
 
